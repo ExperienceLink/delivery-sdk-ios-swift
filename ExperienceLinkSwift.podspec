@@ -11,10 +11,8 @@ Pod::Spec.new do |spec|
   spec.author       = { "ExperienceLink" => "developer@experiencelink.com" }
   spec.social_media_url   = "https://twitter.com/LinkExperience"
 
-  spec.platform      = :ios, "10.0"
-  spec.ios.vendored_frameworks = 'ExperienceLink.framework'
-
   spec.source       = { :git => "https://github.com/experiencelink/delivery-sdk-ios-swift.git", :tag => "#{spec.version}" } 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude" 
+  spec.vendored_frameworks = "Sources/ExperienceLink.xcframework"
+  spec.platform     = :ios, "10.0"
+
 end
